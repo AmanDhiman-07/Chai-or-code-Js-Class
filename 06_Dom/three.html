@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three in DOM</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <div id="demo"></div>
+</body>
+
+
+<script>
+
+
+    // create a div in js to create a (tag) in java script.
+    const div = document.createElement('div')
+    console.log(div)
+
+    // create a class and id in div to create in js
+    div.className = "myclass"
+    // div.id = "myid"
+
+    div.id = Math.round(Math.random() * 10 + 1)
+
+    // setAttribute
+    div.setAttribute("tittle", "generated tittle") // In this value is set in key: value par.
+
+    // style
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+
+    // innerText
+    // div.innerText = "Chai or code"
+
+    // OR
+    
+    const addText = document.createTextNode("Chai or code")
+    div.appendChild(addText)
+
+    // display in body
+    document.body.appendChild(div)
+
+</script>
+
+</html>
